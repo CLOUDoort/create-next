@@ -11,6 +11,7 @@ const Banana = (props) => {
         pw: '',
         email: '',
     })
+    // 여러 개의 state를 관리해줘야 하기 때문에 values를 객체형태로 만들어준다.
 
     // event handlers
     const login = (e) => {

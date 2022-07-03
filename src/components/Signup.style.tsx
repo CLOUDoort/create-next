@@ -13,7 +13,7 @@ export const FormContainer = styled.form`
     }
 `
 
-export const LabelTest = styled.label`
+export const LabelTet = styled.label`
     > span {
         color: blue;
     }
