@@ -1,49 +1,54 @@
-import { useState } from 'react'
-import { FormContainer } from './Signup.style'
 import { toast } from 'react-toastify'
+import useInput from '../hooks/useInput'
+import { FormContainer } from './Signup.style'
 
-const Signup = () => {
-    const [values, setValues] = useState({
-        name: '',
+const Signup = (props) => {
+    const [values, setValues] = useInput({
         id: '',
         pw: '',
+        name: '',
+        birth: '',
         email: '',
+        CP: '',
     })
 
-    const handlerSign = (e) => {
+    const login = (e) => {
         e.preventDefault()
-        toast(`Hello! ${name}`)
-    }
-
-    const handleChange = (e) => {
-        const { name, value } = e.target
-        setValues({ ...values, [name]: value })
+        toast(`Hello, ${values.name}`)
     }
 
     return (
         <>
-            <div>
-                <h1>signup</h1>
-            </div>
-            <div>
-                <FormContainer onSubmit={handlerSign}>
-                    <label>
-                        <div>
-                            <span>NAME: </span>
-                            <input name='name' type='text' value={values.name} placeholder='write name' onChange={handleChange} maxLength={15} />
-                        </div>
-                        <div>
-                            <span>ID: </span>
-                            <input name='id' type='text' value={values.id} placeholder='write ID' onChange={handleChange} maxLength={15} />
-                            <span>PW: </span>
-                            <input name='pw' type='password' value={values.pw} placeholder='write PW' onChange={handleChange} maxLength={15} />
-                            <span>EMAIL: </span>
-                            <input name='email' type='email' value={values.email} placeholder='write email' onChange={handleChange} />
-                            <input type='submit' />
-                        </div>
-                    </label>
-                </FormContainer>
-            </div>
+            <FormContainer onSubmit={login}>
+                <p>OORT</p>
+                <label>
+                    <p>아이디</p>
+                    <input name='id' type='text' onChange={setValues} required maxLength={10} />
+                </label>
+                <label>
+                    <p>비밀번호</p>
+                    <input name='pw' type='password' onChange={setValues} required maxLength={15} />
+                </label>
+                <label>
+                    <p>이름</p>
+                    <input name='name' type='text' onChange={setValues} required />
+                </label>
+                <label>
+                    <p>생년월일</p>
+                    <input name='birth' type='number' onChange={setValues} required maxLength={8} />
+                </label>
+                <label>
+                    <p>이메일</p>
+                    <input name='email' type='email' onChange={setValues} required maxLength={20} />
+                </label>
+                <label>
+                    <p>휴대전화</p>
+                    <input name='CP' type='number' onChange={setValues} required maxLength={11} />
+                </label>
+                <label>
+                    <input type='submit' value='가입하기' />
+                </label>
+            </FormContainer>
         </>
     )
 }
