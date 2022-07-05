@@ -1,4 +1,4 @@
-import Apple from '../components/Apple'
+import Apple from './Apple'
 
 const Home = () => {
     return (

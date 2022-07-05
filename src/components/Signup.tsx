@@ -23,7 +23,7 @@ const Signup = (props) => {
                 <p>OORT</p>
                 <label>
                     <p>아이디</p>
-                    <input name='id' type='text' onChange={setValues} required maxLength={10} />
+                    <input name='id' type='text' onChange={setValues} required maxLength={15} />
                 </label>
                 <label>
                     <p>비밀번호</p>
@@ -31,7 +31,7 @@ const Signup = (props) => {
                 </label>
                 <label>
                     <p>이름</p>
-                    <input name='name' type='text' onChange={setValues} required />
+                    <input name='name' type='text' onChange={setValues} required maxLength={10} />
                 </label>
                 <label>
                     <p>생년월일</p>
@@ -43,7 +43,7 @@ const Signup = (props) => {
                 </label>
                 <label>
                     <p>휴대전화</p>
-                    <input name='CP' type='number' onChange={setValues} required maxLength={11} />
+                    <input name='CP' type='tel' onChange={setValues} required maxLength={11} />
                 </label>
                 <label>
                     <input type='submit' value='가입하기' />

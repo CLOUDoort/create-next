@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import useInput from '../hooks/useInput'
+import useInput from '../src/hooks/useInput'
 
 const Banana = (props) => {
     // props

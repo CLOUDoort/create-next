@@ -1,4 +1,4 @@
-import Banana from '../components/Banana'
+import Banana from './Bananaa'
 
 const banana = () => {
     return (

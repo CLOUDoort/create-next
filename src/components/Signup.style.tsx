@@ -6,7 +6,6 @@ export const FormContainer = styled.form`
     height: auto;
     min-height: 800px;
     margin: 0 15px;
-    padding: 0;
     display: flex;
     flex-direction: column;
     > p {
