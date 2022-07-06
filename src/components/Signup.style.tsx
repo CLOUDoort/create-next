@@ -30,10 +30,14 @@ export const FormContainer = styled.form`
             flex: 1;
             border: 2px solid black;
             border-radius: 5px;
-            color: blue;
             font-size: 20px;
         }
     }
+`
+
+export const SignBtn = styled.input`
+    background-color: green;
+    color: white;
 `
 
 // import styled from 'styled-components'
