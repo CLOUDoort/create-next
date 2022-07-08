@@ -1,3 +1,3 @@
 import axios from 'axios'
 
-export const apiInstance = axios.create({ baseURL: 'https://create-next.vercel.app' })
+export const apiInstance = axios.create({ baseURL: 'http://localhost:3714' })

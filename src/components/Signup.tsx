@@ -1,51 +1,65 @@
 import { toast } from 'react-toastify'
-import useInput from '../hooks/useInput'
 import { FormContainer, SignBtn } from './Signup.style'
+import { apiInstance } from '../apis/setting'
+import { useState } from 'react'
 
 const Signup = (props) => {
-    const [values, setValues] = useInput({
+    const [values, setValues] = useState({
         id: '',
         pw: '',
         name: '',
         birth: '',
         email: '',
-        CP: '',
+        tel: '',
     })
 
-    const login = (e) => {
+    const handleChange = (e) => {
+        const [name, value] = e.target
+        setValues({ ...values, [name]: value })
+    }
+
+    const login = async (e) => {
         e.preventDefault()
         toast(`Hello, ${values.name}`)
+        await apiInstance.post('/signup', {
+            id: e.target[0].value,
+            pw: e.target[1].value,
+            name: e.target[2].value,
+            birth: e.target[3].value,
+            email: e.target[4].value,
+            tel: e.target[5].value,
+        })
     }
 
     return (
         <>
             <FormContainer onSubmit={login}>
                 <p>
-                    <a href='/'>OORT</a>
+                    <a href=''>SIGNIN</a>
                 </p>
                 <label>
                     <p>아이디</p>
-                    <input name='id' type='text' onChange={setValues} required maxLength={15} placeholder='아이디 작성' />
+                    <input name='id' type='text' onChange={handleChange} required maxLength={15} placeholder='아이디 작성' />
                 </label>
                 <label>
                     <p>비밀번호</p>
-                    <input name='pw' type='password' onChange={setValues} required maxLength={15} placeholder='비밀번호 작성' />
+                    <input name='pw' type='password' onChange={handleChange} required maxLength={15} placeholder='비밀번호 작성' />
                 </label>
                 <label>
                     <p>이름</p>
-                    <input name='name' type='text' onChange={setValues} required maxLength={10} placeholder='이름 작성' />
+                    <input name='name' type='text' onChange={handleChange} required maxLength={10} placeholder='이름 작성' />
                 </label>
                 <label>
                     <p>생년월일</p>
-                    <input name='birth' type='number' onChange={setValues} required maxLength={8} placeholder='생년월일 작성' />
+                    <input name='birth' type='number' onChange={handleChange} required maxLength={8} placeholder='생년월일 작성' />
                 </label>
                 <label>
                     <p>이메일</p>
-                    <input name='email' type='email' onChange={setValues} required maxLength={20} placeholder='이메일 작성' />
+                    <input name='email' type='email' onChange={handleChange} required maxLength={20} placeholder='이메일 작성' />
                 </label>
                 <label>
                     <p>휴대전화</p>
-                    <input name='CP' type='tel' onChange={setValues} required maxLength={11} placeholder='휴대전화 번호 작성' />
+                    <input name='tel' type='tel' onChange={handleChange} required maxLength={11} placeholder='휴대전화 번호 작성' />
                 </label>
                 <label>
                     <SignBtn type='submit' value='가입하기' />
