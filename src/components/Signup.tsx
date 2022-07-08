@@ -35,7 +35,7 @@ const Signup = (props) => {
         <>
             <FormContainer onSubmit={login}>
                 <p>
-                    <a href=''>SIGNIN</a>
+                    <a href='./'>SIGNIN</a>
                 </p>
                 <label>
                     <p>아이디</p>
