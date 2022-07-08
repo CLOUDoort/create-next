@@ -14,7 +14,7 @@ const Signup = (props) => {
     })
 
     const handleChange = (e) => {
-        const [name, value] = e.target
+        const { name, value } = e.target
         setValues({ ...values, [name]: value })
     }
 
@@ -22,12 +22,12 @@ const Signup = (props) => {
         e.preventDefault()
         toast(`Hello, ${values.name}`)
         await apiInstance.post('/signup', {
-            id: e.target[0].value,
-            pw: e.target[1].value,
-            name: e.target[2].value,
-            birth: e.target[3].value,
-            email: e.target[4].value,
-            tel: e.target[5].value,
+            id: values.id,
+            pw: values.pw,
+            name: values.name,
+            birth: values.birth,
+            email: values.email,
+            tel: values.tel,
         })
     }
 
