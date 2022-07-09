@@ -3,11 +3,15 @@ import * as React from 'react'
 import { Reset } from 'styled-reset'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import GlobalStyle from '../style/GlobalStyle'
+import Head from 'next/head'
+import { GlobalStyle } from '../style/GlobalStyle'
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
+            <Head>
+                <meta charSet='utf-8' />
+            </Head>
             <Reset />
             <GlobalStyle />
             <Component {...pageProps} />

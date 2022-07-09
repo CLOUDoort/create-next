@@ -13,15 +13,12 @@ const Userlist = () => {
 
     return (
         <>
-            {user.map((userObj) => {
-                return (
-                    <>
-                        <p>id: {userObj.id}</p>
-                        <p>name: {userObj.name}</p>
-                        <p>email: {userObj.email}</p>
-                    </>
-                )
-            })}
+            {user.map((item) => (
+                <div key={item.id}>
+                    <p>name: {item.name}</p>
+                    <p>email: {item.email}</p>
+                </div>
+            ))}
         </>
     )
 }
