@@ -8,7 +8,6 @@ const userInfo = () => {
         <>
             <Reset />
             <Head>
-                <meta charSet='utf-8' />
                 <title>OORT 유저 DB</title>
             </Head>
             <Userlist />

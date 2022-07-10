@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios'
-import { apiInstance } from '../apis/setting'
+import { apiInstance } from '../src/apis/setting'
 
 const Test = () => {
     const [message, setMessage] = useState('')

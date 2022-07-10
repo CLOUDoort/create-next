@@ -10,7 +10,7 @@ const index = () => {
             </Head>
             <DivContainer>
                 <h1>
-                    <Link href='./'>OORT</Link>
+                    <Link href='/'>OORT</Link>
                 </h1>
                 <div>
                     <Link href='signup'>회원가입</Link>
