@@ -1,9 +1,9 @@
 import { toast } from 'react-toastify'
 import { FormContainer, SignBtn } from './Signup.style'
-import { apiInstance } from '../apis/setting'
+import { apiInstance } from '../../apis/setting'
 import { useState } from 'react'
 import Link from 'next/link'
-import IdInput from './signup/IdInput'
+import IdInput from './IdInput'
 
 const Signup = (props) => {
     const [values, setValues] = useState({
