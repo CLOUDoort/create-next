@@ -4,6 +4,7 @@ import { apiInstance } from '../../apis/setting'
 import { useState } from 'react'
 import Link from 'next/link'
 import IdInput from './IdInput'
+import PwInput from './PwInput'
 
 const Signup = (props) => {
     const [values, setValues] = useState({
@@ -41,10 +42,7 @@ const Signup = (props) => {
                     <Link href='/'>SIGNIN</Link>
                 </p>
                 <IdInput onChange={handleChange} />
-                <label>
-                    <p>비밀번호</p>
-                    <input name='pw' type='password' onChange={handleChange} required maxLength={15} placeholder='비밀번호 작성' />
-                </label>
+                <PwInput onChange={handleChange} />
                 <label>
                     <p>이름</p>
                     <input name='name' type='text' onChange={handleChange} required maxLength={10} placeholder='이름 작성' />
