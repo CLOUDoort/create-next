@@ -7,7 +7,7 @@ const EmailInput = (props) => {
         <>
             <LabelContainer>
                 <p>이메일</p>
-                <input name='email' type='tel' onChange={handleChange} required maxLength={11} placeholder='이메일 작성' />
+                <input name='email' type='tel' onChange={handleChange} required maxLength={20} placeholder='이메일 작성' />
             </LabelContainer>
         </>
     )

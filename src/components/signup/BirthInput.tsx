@@ -7,7 +7,7 @@ const BirthInput = (props) => {
         <>
             <LabelContainer>
                 <p>생년월일</p>
-                <input name='birth' type='date' onChange={handleChange} required maxLength={15} placeholder='생년월일 작성' />
+                <input name='birth' type='date' onChange={handleChange} required maxLength={20} placeholder='생년월일 작성' />
             </LabelContainer>
         </>
     )
