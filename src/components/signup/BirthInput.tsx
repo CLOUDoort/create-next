@@ -1,19 +1,19 @@
 import { LabelContainer } from './Signup.style'
 
-const IdInput = (props) => {
+const BirthInput = (props) => {
     const { handleChange } = props
 
     return (
         <>
             <LabelContainer>
-                <p>아이디</p>
-                <input name='id' type='text' onChange={handleChange} required maxLength={15} placeholder='아이디 작성' />
+                <p>생년월일</p>
+                <input name='birth' type='date' onChange={handleChange} required maxLength={15} placeholder='생년월일 작성' />
             </LabelContainer>
         </>
     )
 }
 
-export default IdInput
+export default BirthInput
 
 // <label>
 // <p>아이디</p>
