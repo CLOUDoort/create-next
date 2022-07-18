@@ -30,6 +30,7 @@ const Signup = (props) => {
     const login = async (e) => {
         e.preventDefault()
         toast.done(`Hello, ${values.name}`)
+        toast.error(`Hello, ${values.name}`)
         // const payload = e.currentTarget
         // console.log(payload.email.value)
         await apiInstance.post('/signup', {
