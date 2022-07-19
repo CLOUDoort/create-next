@@ -49,11 +49,10 @@ const Signup = (props) => {
                 <p>
                     <Link href='/'>SIGNIN</Link>
                 </p>
-                <IdInput handleChange={handleChange} />
+                <EmailInput handleChange={handleChange} />
                 <PwInput handleChange={handleChange} />
                 <NameInput handleChange={handleChange} />
                 <BirthInput handleChange={handleChange} />
-                <EmailInput handleChange={handleChange} />
                 <TelInput handleChange={handleChange} />
                 <SubmitLabel>
                     <input type='submit' value='가입하기' />
