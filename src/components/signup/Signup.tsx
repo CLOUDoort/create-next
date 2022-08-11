@@ -23,7 +23,6 @@ const Signup = (props) => {
     const handleChange = (e) => {
         e.preventDefault()
         const { name, value } = e.target
-        console.log(name, value)
         setValues({ ...values, [name]: value })
     }
 
